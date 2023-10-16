@@ -15,15 +15,15 @@ class CashWithdrawal extends Component {
       this.setState(prevBalance => ({
         accountBalance: prevBalance.accountBalance - value,
       }))
-    } else if (value < 500 && accountBalance >= 200 && accountBalance <= 500) {
+    } else if (value < 500 && accountBalance >= 200 && accountBalance < 500) {
       this.setState(prevBalance => ({
         accountBalance: prevBalance.accountBalance - value,
       }))
-    } else if (value < 200 && accountBalance >= 100 && accountBalance <= 200) {
+    } else if (value < 200 && accountBalance >= 100 && accountBalance < 200) {
       this.setState(prevBalance => ({
         accountBalance: prevBalance.accountBalance - value,
       }))
-    } else if (value < 100 && accountBalance >= 50 && accountBalance <= 100) {
+    } else if (value < 100 && accountBalance >= 50 && accountBalance < 100) {
       this.setState(prevBalance => ({
         accountBalance: prevBalance.accountBalance - value,
       }))
