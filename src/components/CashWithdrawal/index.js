@@ -11,19 +11,16 @@ class CashWithdrawal extends Component {
 
   updateBalance = value => {
     const {accountBalance} = this.state
-    if (accountBalance >= 500) {
-      this.setState(prevBalance => ({
-        accountBalance: prevBalance.accountBalance - value,
-      }))
-    } else if (value < 500 && accountBalance >= 200 && accountBalance < 500) {
-      this.setState(prevBalance => ({
-        accountBalance: prevBalance.accountBalance - value,
-      }))
-    } else if (value < 200 && accountBalance >= 100 && accountBalance < 200) {
-      this.setState(prevBalance => ({
-        accountBalance: prevBalance.accountBalance - value,
-      }))
-    } else if (value < 100 && accountBalance >= 50 && accountBalance < 100) {
+
+    const condition1 = accountBalance >= 500
+    const condition2 =
+      value < 500 && accountBalance >= 200 && accountBalance < 500
+    const condition3 =
+      value < 200 && accountBalance >= 100 && accountBalance < 200
+    const condition4 =
+      value < 100 && accountBalance >= 50 && accountBalance < 100
+
+    if (condition1 || condition2 || condition3 || condition4) {
       this.setState(prevBalance => ({
         accountBalance: prevBalance.accountBalance - value,
       }))
