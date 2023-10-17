@@ -53,6 +53,13 @@
   color: #7c3aed;
   font-size: 14px;
   font-family: 'Roboto';
+  font-weight: 800;
+}
+
+@media screen and (min-width: 768px) {
+  .initial {
+    font-size: 28px;
+  }
 }
 
 .name {
